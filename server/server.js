@@ -7,7 +7,7 @@ const { loadPlanetsData } = require('./src/models/planets.model');
 
 const PORT = process.env.PORT || 8000;
 
-const MONGO_URL = 'mongodb+srv://ladenisko:Password2012@cluster0.scmzbi3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const MONGO_URL = 'mongodb+srv://node_api:w843VSO3fw6DeGfr@cluster0.scmzbi3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 const server = http.createServer(app);
 
