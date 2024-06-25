@@ -6,10 +6,12 @@ on:
     branches: ["master"]
 jobs:
   build:
+    env:
+      CI: true
     runs-on: ubuntu-lastest
     strategy:
       matrix:
-        node-version: [20]
+        node-version: [18.x, 20.x]
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js version ${{ matrix.node-version }}
@@ -19,3 +21,4 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run build --prefix client
+    - run: npm test
